@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Estacionamiento</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <img class="animate__bounceIn" src="images/Parking 2 .png" width="400px" height="150px">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Estacionamiento</h2>
+        <form id="vehiculoForm">
+            <div class="form-group">
+                <label for="tipoVehiculo">Tipo de vehículo:</label>
+                <select class="form-control" id="tipoVehiculo">
+                    <option value="CARRO">CARRO</option>
+                    <option value="MOTO">MOTO</option>
+                    <option value="BICI">BICI</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numeroPlaca">Número de placa:</label>
+                <input type="text" class="form-control" id="numeroPlaca" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar vehículo</button>
+        </form>
+        <div id="registroVehiculos" class="mt-5">
+            <h4>Registro de vehículos:</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tipo</th>
+                        <th>Número de placa</th>
+                        <th>Hora de entrada</th>
+                        <th>Minutos estacionados</th>
+                        <th>Valor a pagar</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaVehiculos"></tbody>
+            </table>
+        </div>
+        <div id="reloj"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
